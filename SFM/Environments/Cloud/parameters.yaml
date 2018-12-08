@@ -1,0 +1,3 @@
+## Parameters file ##
+FrontEnd_cpu: 1
+FrontEnd_ingressport: 80

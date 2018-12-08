@@ -1,0 +1,28 @@
+﻿## Service definition ##
+application:
+  schemaVersion: 1.0.0-preview2
+  name: SFM
+  properties:
+    services:
+      - name: FrontEnd
+        properties:
+          description: FrontEnd description.
+          osType: Windows
+          codePackages:
+            - name: FrontEnd
+              image: frontend:dev
+              endpoints:
+                - name: FrontEndListener
+                  port: 80
+#              environmentVariables:
+#                - name: ApplicationInsights:InstrumentationKey
+#                  value: "<Place AppInsights key here, or reference it via a secret>"
+              resources:
+                requests:
+                  cpu: "[parameters('FrontEnd_cpu')]"
+                  memoryInGB: 1
+          replicaCount: 1
+          networkRefs:
+            - name: SFMNetwork
+              endpointRefs:
+                - name: FrontEndListener

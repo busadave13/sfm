@@ -1,0 +1,16 @@
+gateway:
+  schemaVersion: 1.0.0-preview2
+  name: SFMGateway
+  properties:
+    description: SFM Gateway Resource
+    sourceNetwork:
+      name: Open
+    destinationNetwork:
+      name: SFMNetwork
+    tcp:
+      - name: FrontEndTCP
+        port: "[parameters('FrontEnd_ingressport')]"
+        destination:
+          applicationName: SFM
+          serviceName: FrontEnd
+          endpointName: FrontEndListener
