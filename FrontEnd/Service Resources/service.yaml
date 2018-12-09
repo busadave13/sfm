@@ -1,7 +1,7 @@
 ﻿## Service definition ##
 application:
   schemaVersion: 1.0.0-preview2
-  name: SFM
+  name: SFMFrontEnd
   properties:
     services:
       - name: FrontEnd
@@ -23,6 +23,6 @@ application:
                   memoryInGB: 1
           replicaCount: 1
           networkRefs:
-            - name: SFMNetwork
+            - name: SFMFrontEndNetwork
               endpointRefs:
                 - name: FrontEndListener

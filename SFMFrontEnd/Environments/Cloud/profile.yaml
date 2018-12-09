@@ -1,0 +1,18 @@
+## Visual Studio SFApp Publish Profile ##
+vsSFAppPublishProfile:
+  schemaVersion: 1.0.0-preview2
+  resourceGroupName: ServiceFabricCluster
+  subscription:
+    id: 619aad47-1db0-4775-92b2-470b94d3b0e0
+    name: StoreSDK-Test
+    tenant: &o0
+      id: 72f988bf-86f1-41af-91ab-2d7cd011db47
+      uniqueId: 64927577-cd9f-4ec7-9b09-bc601e32afde
+  location:
+    name: westus
+    displayName: West US
+  containerRegistry:
+    serverName: xbetcontainerregister.azurecr.io
+    userName: xbetcontainerregister
+    resourceId: /subscriptions/619aad47-1db0-4775-92b2-470b94d3b0e0/resourceGroups/XBET-Test/providers/Microsoft.ContainerRegistry/registries/xbetcontainerregister
+    tenant: *o0

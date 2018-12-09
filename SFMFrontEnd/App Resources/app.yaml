@@ -1,5 +1,5 @@
 ﻿application:
   schemaVersion: 1.0.0-preview2
-  name: SFM
+  name: SFMFrontEnd
   properties:
-    description: SFM description.
+    description: SFMFrontEnd description.
